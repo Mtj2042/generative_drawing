@@ -2,6 +2,7 @@
 from py5canvas import *
 
 def setup():
+    # Flag these as globals, so they are available in draw()
     global runners, num_runners, runner_size, runner_spacing, increment
 
     create_canvas(512, 512)
@@ -28,15 +29,16 @@ def draw():
     # draw the runners and update their position
     stroke(0)
     no_fill()
-    begin_shape()
+    #begin_shape()
 
     for i in range(len(runners)):
         x, y = runners[i]
-        vertex(x, y)
+        #vertex(x, y)
+        circle(x, y, 5)
         # rotate each runner's position
         runners[i] = rotate_vector(x, y, increment * (len(runners) - i))
 
-    end_shape()
+    #end_shape()
 
 
 run()
