@@ -29,15 +29,14 @@ def draw():
     # draw the runners and update their position
     stroke(0)
     no_fill()
-    #begin_shape()
 
+    #begin_shape()
     for i in range(len(runners)):
         x, y = runners[i]
         #vertex(x, y)
         circle(x, y, 5)
         # rotate each runner's position
         runners[i] = rotate_vector(x, y, increment * (len(runners) - i))
-
     #end_shape()
 
 
