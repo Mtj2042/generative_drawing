@@ -39,11 +39,12 @@ def setup():
 
 def draw():
     global i
-    # Given a "flat" index we can use the modulo operator
-    # to recover the row and column in a grid
-    x = i % ncols  # the column
-    y = (i - x) // ncols  # the row
-    rect(x * size, y * size, size, size)
-    i = (i + primes[29]) % (nrows * ncols)  # in total, our grid has rows*columns entries
+    for k in range(10):
+        # Given a "flat" index we can use the modulo operator
+        # to recover the row and column in a grid
+        x = i % ncols  # the column
+        y = (i - x) // ncols  # the row
+        rect(x * size, y * size, size, size)
+        i = (i + primes[-27]) % (nrows * ncols)  # in total, our grid has rows*columns entries
 
 run()
