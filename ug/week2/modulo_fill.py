@@ -13,9 +13,10 @@ size = 10
 nrows = 40
 ncols = 40
 i = 0
+pattern = 0
 
-# Prime numbers will give us nice patterns when filling the grid
-primes = [2, 3, 5, 7, 11, 13, 17, 19,
+# most prime numbers will give us nice patterns that fill the grid in (nrows * ncols) iterations
+primes = [1, 2, 3, 5, 7, 11, 13, 17, 19,
           23, 29, 31, 37, 41, 43, 47,
           53, 59, 61, 67, 71, 73, 79,
           83, 89, 97, 101, 103, 107,
@@ -32,17 +33,15 @@ primes = [2, 3, 5, 7, 11, 13, 17, 19,
           463, 467, 479, 487, 491, 499,
           503, 509, 521, 523, 541]
 
-pattern = 0
-
 def setup():
     create_canvas(size * ncols, size * nrows)
     fill(0)
     background(255)
 
 def draw():
-    global i
+    global i # <- to modify a global we need to explicitly declare it
     for k in range(10):
-        # Given a "flat" index we can use the modulo operator
+        # Given a "flat" index we can use the modulo operator and integer division (//)
         # to recover the row and column in a grid
         x = i % ncols  # the column
         y = (i - x) // ncols  # the row
@@ -50,7 +49,7 @@ def draw():
         i = (i + primes[pattern]) % (nrows * ncols)  # in total, our grid has rows*columns entries
 
 def key_pressed(k):
-    global pattern
+    global pattern 
     if k==" ":
         background(255)
         pattern = (pattern + 1) % len(primes)
