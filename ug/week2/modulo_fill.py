@@ -32,6 +32,8 @@ primes = [2, 3, 5, 7, 11, 13, 17, 19,
           463, 467, 479, 487, 491, 499,
           503, 509, 521, 523, 541]
 
+pattern = 0
+
 def setup():
     create_canvas(size * ncols, size * nrows)
     fill(0)
@@ -45,6 +47,12 @@ def draw():
         x = i % ncols  # the column
         y = (i - x) // ncols  # the row
         rect(x * size, y * size, size, size)
-        i = (i + primes[-27]) % (nrows * ncols)  # in total, our grid has rows*columns entries
+        i = (i + primes[pattern]) % (nrows * ncols)  # in total, our grid has rows*columns entries
+
+def key_pressed(k):
+    global pattern
+    if k==" ":
+        background(255)
+        pattern = (pattern + 1) % len(primes)
 
 run()
