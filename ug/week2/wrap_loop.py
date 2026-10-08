@@ -50,7 +50,7 @@ def draw():
         theta = t * TWO_PI + phase
 
         # Add add the offset and modulo to animate and wrap around
-        # subtracts `w` to hide the first obect on the left
+        # subtracts `w` to hide the first object on the left
         draw_object((t * wrap_dist + x) % wrap_dist - spacing, height / 2, size, theta)
 
 
