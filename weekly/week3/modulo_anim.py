@@ -18,9 +18,9 @@ from py5canvas import *
 
 def setup():
     create_canvas(512, 512)
-    stroke(10)
+    stroke(100)
     no_fill()
-    #no_loop()
+    no_loop()
 
 def ripple(x, y, step):
     t = frame_count
@@ -29,7 +29,7 @@ def ripple(x, y, step):
         circle(x, y, i + t % step)
 
 def draw():
-    background(255)
+    background(255,0,0)
     ripple(width / 2, height / 2, 20)
     
 run()
