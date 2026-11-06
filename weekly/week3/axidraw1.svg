@@ -9,7 +9,6 @@
    inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -21,9 +20,9 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="0.84730784"
-     inkscape:cx="196.50473"
-     inkscape:cy="256.69537"
+     inkscape:zoom="0.53703109"
+     inkscape:cx="192.72627"
+     inkscape:cy="155.48448"
      inkscape:window-width="1186"
      inkscape:window-height="690"
      inkscape:window-x="0"
@@ -60034,8 +60033,15 @@
          id="path5000" />
     </g>
   </defs>
-  <use
-     xlink:href="#source-190"
-     id="use5000"
-     transform="translate(-4.7208344,-1.1802086)" />
+  <plotdata
+     application="axidraw"
+     model="1"
+     plob_version="n/a"
+     layer="-1"
+     pause_dist="773373"
+     pause_ref="773373"
+     last_x="8.01249999999999"
+     last_y="113.46250000000013"
+     rand_seed="1"
+     row="0" />
 </svg>
